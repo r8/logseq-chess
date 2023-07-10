@@ -1,0 +1,44 @@
+{
+  "name": "logseq-chess",
+  "version": "0.0.1",
+  "description": "Render chessboards in your Logseq documents",
+  "keywords": [
+    "logseq",
+    "plugin",
+    "chess"
+  ],
+  "author": "Sergey Storchay <r8@r8.com.ua>",
+  "repository": "https://github.com/r8/logseq-chess.git",
+  "license": "MIT",
+  "logseq": {
+    "id": "logseq-chess",
+    "main": "dist/index.html",
+    "icon": "./icon.png",
+    "title": "Logseq Chess"
+  },
+  "dependencies": {
+    "@logseq/libs": "^0.0.10",
+    "react": "17.0.2",
+    "react-chessboard": "^3.1.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^10.0.1",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/react": "^17.0.39",
+    "conventional-changelog-conventionalcommits": "^6.1.0",
+    "parcel": "latest",
+    "semantic-release": "^21.0.7"
+  },
+  "alias": {
+    "react/jsx-dev-runtime": "./node_modules/react/jsx-dev-runtime.js",
+    "react/jsx-runtime": "./node_modules/react/jsx-runtime.js",
+    "react": "./src/shims/React.ts",
+    "react-dom": "./src/shims/ReactDOM.ts"
+  },
+  "scripts": {
+    "dev": "parcel serve ./index.html --public-url ./ --no-hmr",
+    "build": "parcel build ./index.html --public-url ."
+  }
+}
