@@ -1,3 +1,7 @@
+<p align="center" width="100%">
+    <img src="icon.png" alt="logseq-chess">
+</p>
+
 # Logseq Chess
 
 A Logseq plugin for rendering chessboards
@@ -27,7 +31,8 @@ arrows: f3->e5 b5->c6
 
 ### Inspired by
 
-[Chess Viewer for VSCode](https://github.com/eronnen/vscode-markdown-chess)
+- [Logseq Fenced Code Plus](https://github.com/xyhp915/logseq-fenced-code-plus)
+- [Chess Viewer for VSCode](https://github.com/eronnen/vscode-markdown-chess)
 
 ### Icon
 
