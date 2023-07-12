@@ -1,3 +1,7 @@
+<p align="center" width="100%">
+    <img src="icon.png" alt="logseq-chess">
+</p>
+
 # Logseq Chess
 
 A Logseq plugin for rendering chessboards
