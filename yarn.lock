@@ -155,10 +155,10 @@
   resolved "https://registry.yarnpkg.com/@lmdb/lmdb-win32-x64/-/lmdb-win32-x64-2.5.2.tgz#28f643fbc0bec30b07fbe95b137879b6b4d1c9c5"
   integrity sha512-zrBczSbXKxEyK2ijtbRdICDygRqWSRPpZMN5dD1T8VMEW5RIhIbwFWw2phDRXuBQdVDpSjalCIUMWMV2h3JaZA==
 
-"@logseq/libs@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@logseq/libs/-/libs-0.0.10.tgz#305d65b733ed16d157f57a1a0759e0233d1b1a81"
-  integrity sha512-Ah5wAhLcgrlOtk/9nEe11UsqOzvpcEaEWDV+oFD3TIGTeP4mfv2HjDiPYPBGXuMZRgvsW6klQLzzaxMieksXXg==
+"@logseq/libs@^0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@logseq/libs/-/libs-0.0.15.tgz#03b8b81a0a1557e3f022d68c978ddcb501cd4421"
+  integrity sha512-Z4YrYGfu8Y3s9LTqVnPGkxlO+KZtP1YalH/A63zYgxP61cV5QtKlnHWNcjsKxsD5CkaSL4MlSN4mf7wNx/Fm0A==
   dependencies:
     csstype "3.1.0"
     debug "4.3.4"
@@ -4102,6 +4102,11 @@ posthtml@^0.16.4, posthtml@^0.16.5:
   dependencies:
     posthtml-parser "^0.11.0"
     posthtml-render "^3.0.0"
+
+prettier@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.0.0.tgz#e7b19f691245a21d618c68bc54dc06122f6105ae"
+  integrity sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==
 
 proc-log@^3.0.0:
   version "3.0.0"
