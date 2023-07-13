@@ -1,2 +1,5 @@
 # Ignore artifacts:
 dist
+
+# Ignore Markdown
+*.md

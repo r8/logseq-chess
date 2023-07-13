@@ -1,16 +1,17 @@
-import '@logseq/libs'
-import { LSPluginBaseInfo } from '@logseq/libs/dist/LSPlugin'
-import ChessRenderer from './renderers/chess/chessRenderer'
+import "@logseq/libs";
+import { LSPluginBaseInfo } from "@logseq/libs/dist/LSPlugin";
+import ChessRenderer from "./renderers/chess/chessRenderer";
+import Renderer from "./renderers/renderer";
 
 function main(baseInfo: LSPluginBaseInfo) {
-  logseq.Experiments.registerFencedCodeRenderer(
-      'chess', {
-        edit: true,
-        render: ChessRenderer
-      }
-  )
+  const renderers: Renderer[] = [new ChessRenderer()];
+
+  for (const renderer of renderers) {
+    logseq.Experiments.registerFencedCodeRenderer(renderer.supports, {
+      edit: true,
+      render: renderer.render,
+    });
+  }
 }
 
-logseq
-  .ready(main)
-  .catch(console.error)
+logseq.ready(main).catch(console.error);

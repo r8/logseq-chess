@@ -1,1 +1,1 @@
-module.exports = logseq.Experiments.React
+module.exports = logseq.Experiments.React;

@@ -1,27 +1,35 @@
-import '@logseq/libs'
-import React from 'react'
-import { Chessboard } from 'react-chessboard'
+import "@logseq/libs";
+import React from "react";
+import { Chessboard } from "react-chessboard";
 import ChessConfig from "../../parsers/chess/chessConfig";
+import Renderer from "../renderer";
 
-const ChessRenderer = (props: { content: string }) => {
-  const { content } = props
-  let size: number|string = 280
+class ChessRenderer extends Renderer {
+  supports = "chess";
 
-  const chessConfig = new ChessConfig(content)
+  render = (props: { content: string }) => {
+    const { content } = props;
+    let size: number | string = 280;
 
-  if (chessConfig.size) {
-    size = chessConfig.size
-  }
+    const chessConfig = new ChessConfig(content);
 
-  if (typeof size == 'string' && Number.parseInt(size).toString() === size) {
-    size = Number.parseInt(size)
-  }
+    if (chessConfig.size) {
+      size = chessConfig.size;
+    }
 
-  return (
-    <div style={{ width: size }}>
-      <Chessboard position={chessConfig.fen} customArrows={chessConfig.arrows} />
-    </div>
-  );
+    if (typeof size == "string" && Number.parseInt(size).toString() === size) {
+      size = Number.parseInt(size);
+    }
+
+    return (
+      <div style={{ width: size }}>
+        <Chessboard
+          position={chessConfig.fen}
+          customArrows={chessConfig.arrows}
+        />
+      </div>
+    );
+  };
 }
 
-export default ChessRenderer
+export default ChessRenderer;
