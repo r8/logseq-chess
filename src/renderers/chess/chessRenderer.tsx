@@ -1,8 +1,8 @@
 import "@logseq/libs";
 import React from "react";
 import { Chessboard } from "react-chessboard";
-import ChessConfig from "../../parsers/chess/chessConfig";
-import Renderer from "../renderer";
+import ChessConfig from "~/parsers/chess/chessConfig";
+import Renderer from "~/renderers/renderer";
 
 class ChessRenderer extends Renderer {
   supports = "chess";

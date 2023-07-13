@@ -22,15 +22,19 @@
     "react-chessboard": "^3.1.0"
   },
   "devDependencies": {
+    "@parcel/transformer-typescript-tsc": "^2.9.3",
+    "@parcel/validator-typescript": "^2.9.3",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/react": "^17.0.39",
     "conventional-changelog-conventionalcommits": "^6.1.0",
-    "parcel": "latest",
+    "parcel": "^2.9.3",
+    "parcel-resolver-tspaths": "^0.0.9",
     "prettier": "3.0.0",
-    "semantic-release": "^21.0.7"
+    "semantic-release": "^21.0.7",
+    "typescript": ">=3.0.0"
   },
   "alias": {
     "react/jsx-dev-runtime": "./node_modules/react/jsx-dev-runtime.js",
