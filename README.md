@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-    <img src="https://github.com/r8/logseq-chess/raw/main/icon.png" alt="logseq-chess">
+    <img src="https://github.com/r8/logseq-chess/raw/main/icon.png" alt="logseq-chess" width="128" height="128">
 </p>
 
 # Logseq Chess
