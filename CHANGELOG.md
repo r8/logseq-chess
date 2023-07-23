@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/r8/logseq-chess/compare/v1.0.1...v1.1.0) (2023-07-23)
+
+
+### Features
+
+* Add plugin settings ([8ee2590](https://github.com/r8/logseq-chess/commit/8ee25904faeee85d7545de27414b6ef6d0fde66b))
+* Use settings to define default board size ([b4d5ea5](https://github.com/r8/logseq-chess/commit/b4d5ea534a6cb4de0d0be7b0e9e87eb7aaa9ca59))
+
 ## [1.0.1](https://github.com/r8/logseq-chess/compare/v1.0.0...v1.0.1) (2023-07-11)
 
 
