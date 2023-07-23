@@ -8,9 +8,9 @@ import { ISettings } from "../../settingsSchema";
 class ChessRenderer extends Renderer {
   supports = "chess";
 
-  render = (settings: ISettings, props: { content: string }) => {
+  render = (props: { content: string }) => {
     const { content } = props;
-    let size: number | string = settings.boardSize;
+    let size: number | string = this.settings.boardSize;
 
     const chessConfig = new ChessConfig(content);
 
