@@ -1,6 +1,6 @@
 import { SettingSchemaDesc } from "@logseq/libs/dist/LSPlugin";
 
-export default [
+export const settingsSchema: Array<SettingSchemaDesc> = [
   {
     key: "boardSize",
     type: "string",
@@ -8,4 +8,9 @@ export default [
     description: "Size in pixels or percentage. Default: 280",
     default: 280,
   },
-] as Array<SettingSchemaDesc>;
+];
+
+export interface ISettings {
+  disabled: boolean;
+  boardSize: string;
+}
