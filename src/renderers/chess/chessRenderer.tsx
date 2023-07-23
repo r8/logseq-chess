@@ -3,13 +3,14 @@ import React from "react";
 import { Chessboard } from "react-chessboard";
 import ChessConfig from "../../parsers/chess/chessConfig";
 import Renderer from "../renderer";
+import { ISettings } from "../../settingsSchema";
 
 class ChessRenderer extends Renderer {
   supports = "chess";
 
-  render = (props: { content: string }) => {
+  render = (settings: ISettings, props: { content: string }) => {
     const { content } = props;
-    let size: number | string = 280;
+    let size: number | string = settings.boardSize;
 
     const chessConfig = new ChessConfig(content);
 
