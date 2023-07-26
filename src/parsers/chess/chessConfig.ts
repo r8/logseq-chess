@@ -5,6 +5,7 @@ const ARROW_SEPARATOR = "->";
 class ChessConfig {
   public fen?: string;
   public arrows?: Square[][];
+  public squares?: Square[];
   public size?: string;
 
   constructor(content: string) {
@@ -33,6 +34,9 @@ class ChessConfig {
       case "arrows":
         this.parseArrows(value);
         break;
+      case "squares":
+        this.squares = this.parseSquares(value);
+        break;
       case "size":
         this.size = value;
     }
@@ -47,6 +51,10 @@ class ChessConfig {
       const parts = item.split(ARROW_SEPARATOR);
       this.arrows.push(parts as Square[]);
     });
+  };
+
+  private parseSquares = (line: string): Square[] => {
+    return line.split(" ").map((item) => item.trim() as Square);
   };
 }
 

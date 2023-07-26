@@ -1,6 +1,5 @@
-import "@logseq/libs";
 import React from "react";
-import { Chessboard } from "react-chessboard";
+import Chessboard from "../../components/chessboard/chessboard";
 import ChessConfig from "../../parsers/chess/chessConfig";
 import Renderer from "../renderer";
 import { ISettings } from "../../settingsSchema";
@@ -8,9 +7,9 @@ import { ISettings } from "../../settingsSchema";
 class ChessRenderer extends Renderer {
   supports = "chess";
 
-  render = (props: { content: string }) => {
+  render = (settings: ISettings, props: { content: string }) => {
     const { content } = props;
-    let size: number | string = this.settings.boardSize;
+    let size: number | string = settings.boardSize;
 
     const chessConfig = new ChessConfig(content);
 
@@ -27,6 +26,7 @@ class ChessRenderer extends Renderer {
         <Chessboard
           position={chessConfig.fen}
           customArrows={chessConfig.arrows}
+          markSquares={chessConfig.squares}
         />
       </div>
     );

@@ -7,12 +7,12 @@ import { settingsSchema, ISettings } from "./settingsSchema";
 function main(baseInfo: LSPluginBaseInfo) {
   const { settings } = baseInfo;
 
-  const renderers: Renderer[] = [new ChessRenderer(settings as ISettings)];
+  const renderers: Renderer[] = [new ChessRenderer()];
 
   for (const renderer of renderers) {
     logseq.Experiments.registerFencedCodeRenderer(renderer.supports, {
       edit: true,
-      render: renderer.render,
+      render: (props) => renderer.render(settings as ISettings, props),
     });
   }
 }
