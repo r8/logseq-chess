@@ -1,3 +1,5 @@
+import { SQUARE_MARK_COLOR } from "../../../constants/colors";
+
 const SquareMark = () => (
   <div
     style={{
@@ -10,7 +12,7 @@ const SquareMark = () => (
       borderTopRightRadius: "50%",
       borderBottomLeftRadius: "50%",
       borderBottomRightRadius: "50%",
-      borderColor: "#008000",
+      borderColor: SQUARE_MARK_COLOR,
       borderWidth: 2,
     }}
   />

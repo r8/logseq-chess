@@ -1,3 +1,5 @@
+import { SQUARE_HIGHLIGHT_COLOR } from "../../../constants/colors";
+
 const SquareHighlight = () => (
   <div
     style={{
@@ -6,8 +8,7 @@ const SquareHighlight = () => (
       right: 0,
       top: 0,
       bottom: 0,
-      backgroundColor: "#9BC700",
-      opacity: 0.4,
+      backgroundColor: SQUARE_HIGHLIGHT_COLOR,
     }}
   />
 );

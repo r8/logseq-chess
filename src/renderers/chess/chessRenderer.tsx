@@ -3,6 +3,7 @@ import Chessboard from "../../components/chessboard/chessboard";
 import ChessConfig from "../../parsers/chess/chessConfig";
 import Renderer from "../renderer";
 import { ISettings } from "../../settingsSchema";
+import { ARROW_COLOR } from "../../constants/colors";
 
 class ChessRenderer extends Renderer {
   supports = "chess";
@@ -26,6 +27,7 @@ class ChessRenderer extends Renderer {
         <Chessboard
           position={chessConfig.fen}
           customArrows={chessConfig.arrows}
+          customArrowColor={ARROW_COLOR}
           markSquares={chessConfig.squares}
           highlightSquares={chessConfig.lastMove}
         />
