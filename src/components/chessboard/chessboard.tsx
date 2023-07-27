@@ -22,6 +22,7 @@ const Chessboard = forwardRef<
         <CustomSquareRenderer
           {...squareProps}
           markSquares={props.markSquares}
+          highlightSquares={props.highlightSquares}
           children={squareProps.children}
         />
       )}

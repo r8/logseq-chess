@@ -27,6 +27,7 @@ class ChessRenderer extends Renderer {
           position={chessConfig.fen}
           customArrows={chessConfig.arrows}
           markSquares={chessConfig.squares}
+          highlightSquares={chessConfig.lastMove}
         />
       </div>
     );

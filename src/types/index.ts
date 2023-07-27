@@ -6,6 +6,12 @@ export type ExtendedChessboardProps = {
    * @default []
    */
   markSquares?: Square[];
+
+  /**
+   * Array of squares that should be highlighted. e.g. ['f1', 'b5'].
+   * @default []
+   */
+  highlightSquares?: Square[];
 };
 
 export type CustomSquareRendererProps = {
@@ -14,4 +20,10 @@ export type CustomSquareRendererProps = {
    * @default []
    */
   markSquares?: Square[];
+
+  /**
+   * Array of squares that should be highlighted. e.g. ['f1', 'b5'].
+   * @default []
+   */
+  highlightSquares?: Square[];
 };
