@@ -1,6 +1,6 @@
 {
   "name": "logseq-chess",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Render chessboards in your Logseq documents",
   "keywords": [
     "logseq",

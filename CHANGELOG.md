@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/r8/logseq-chess/compare/v1.1.0...v1.2.0) (2023-07-27)
+
+
+### Features
+
+* Add ability to highlight squares on a chessboard ([518dcb8](https://github.com/r8/logseq-chess/commit/518dcb88778b77b2901e804501b7e6f6aefacfab))
+* Add ability to mark squares on a chessboard ([973cbbf](https://github.com/r8/logseq-chess/commit/973cbbf12ae301d4840c99239bfabdc441eacc00))
+
 # [1.1.0](https://github.com/r8/logseq-chess/compare/v1.0.1...v1.1.0) (2023-07-23)
 
 
