@@ -13,7 +13,7 @@ const SquareMark = () => (
       borderBottomLeftRadius: "50%",
       borderBottomRightRadius: "50%",
       borderColor: SQUARE_MARK_COLOR,
-      borderWidth: 2,
+      borderWidth: 3,
     }}
   />
 );
