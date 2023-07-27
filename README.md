@@ -20,12 +20,14 @@ fen: rnbqkbnr/pppp1ppp/8/4p2Q/4P3/8/PPPP1PPP/RNB1KBNR b KQkq - 1 2
 ```
 ````
 
-You can also draw the arrows on the board:
+You can also draw the arrows on the board, mark some squares and highlight the last move:
 
 ````markdown
 ```chess
 fen: r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 1
 arrows: f3->e5 b5->c6
+squares: g5 f7
+lastMove: f1 b5
 ```
 ````
 
