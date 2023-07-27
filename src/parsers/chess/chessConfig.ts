@@ -1,6 +1,5 @@
 import { Square } from "react-chessboard/dist/chessboard/types";
-
-const ARROW_SEPARATOR = "->";
+import { ARROW_SEPARATOR } from "../../constants/config";
 
 class ChessConfig {
   public fen?: string;
