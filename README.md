@@ -31,6 +31,10 @@ lastMove: f1 b5
 ```
 ````
 
+### Support
+
+<a href="https://www.buymeacoffee.com/reight"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=reight&button_colour=40DCA5&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00" /></a>
+
 ### Inspired by
 
 - [Logseq Fenced Code Plus](https://github.com/xyhp915/logseq-fenced-code-plus)
