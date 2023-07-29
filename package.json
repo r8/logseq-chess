@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@logseq/libs": "^0.0.15",
+    "jotai": "^2.2.2",
     "react": "17.0.2",
     "react-chessboard": "^3.1.0"
   },
