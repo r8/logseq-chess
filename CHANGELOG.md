@@ -1,3 +1,18 @@
+# [1.3.0](https://github.com/r8/logseq-chess/compare/v1.2.0...v1.3.0) (2023-08-05)
+
+
+### Bug Fixes
+
+* Scale square marks border with board size ([a543da1](https://github.com/r8/logseq-chess/commit/a543da1bd95a3117443f21c12ccf738312febfe7))
+
+
+### Features
+
+* Add button to switch board orientation ([f015f33](https://github.com/r8/logseq-chess/commit/f015f3340be7856723bca4069d4dd3d9130a6c9a))
+* Add showToolbar config parameter ([6ccd715](https://github.com/r8/logseq-chess/commit/6ccd7151b6c57db8219452cf1a79f476c7f9c769))
+* Derive renderer color theme from current Logseq theme ([d76adbd](https://github.com/r8/logseq-chess/commit/d76adbd1db099eccaf5d11cfef2bd7ea960c5a81))
+* Support setting orientation with config ([f73b00b](https://github.com/r8/logseq-chess/commit/f73b00b1219868036ff855947b741951d32aa072))
+
 # [1.2.0](https://github.com/r8/logseq-chess/compare/v1.1.0...v1.2.0) (2023-07-27)
 
 
