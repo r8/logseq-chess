@@ -36,6 +36,7 @@ class ChessRenderer extends Renderer {
               customArrowColor={ARROW_COLOR}
               markSquares={chessConfig.squares}
               highlightSquares={chessConfig.lastMove}
+              boardOrientation={chessConfig.orientation}
             />
           </SizeWatcher>
         </Provider>

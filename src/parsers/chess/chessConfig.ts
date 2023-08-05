@@ -1,4 +1,7 @@
-import { Square } from "react-chessboard/dist/chessboard/types";
+import {
+  BoardOrientation,
+  Square,
+} from "react-chessboard/dist/chessboard/types";
 import { ARROW_SEPARATOR } from "../../constants/config";
 
 class ChessConfig {
@@ -7,6 +10,7 @@ class ChessConfig {
   public squares?: Square[];
   public lastMove?: Square[];
   public size?: string;
+  public orientation?: BoardOrientation;
 
   constructor(content: string) {
     this.parse(content);
@@ -42,6 +46,10 @@ class ChessConfig {
         break;
       case "size":
         this.size = value;
+        break;
+      case "orientation":
+        this.orientation = this.parseOrientation(value);
+        break;
     }
   };
 
@@ -66,6 +74,10 @@ class ChessConfig {
     }
 
     return items;
+  };
+
+  private parseOrientation = (line: string): BoardOrientation => {
+    return line == "black" ? "black" : "white";
   };
 }
 
