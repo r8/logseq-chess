@@ -8,9 +8,9 @@ A Logseq plugin for rendering chessboards
 
 > 🛠 In development
 
-### Usage
+## Usage
 
-#### Chess Positions
+### Chess Positions
 
 Create a chess fenced code block in your document and supply the positions with `fen` property:
 
@@ -31,7 +31,7 @@ lastMove: f1 b5
 ```
 ````
 
-##### Properties
+#### Properties
 
 You can set various properties inside the code block, each one on a separate line in the format `name: value`.
 
@@ -45,19 +45,19 @@ You can set various properties inside the code block, each one on a separate lin
 | **orientation** | Which side should be at the bottom of the board | `white` / `black`    | `white`                                    |
 | **showToolbar** | Enables toolbar with orientation change control | `true` / `false`     | `false`                                    |
 
-### Support
+## Support
 
 <a href="https://www.buymeacoffee.com/reight"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=reight&button_colour=40DCA5&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
-### Inspired by
+## Inspired by
 
 - [Logseq Fenced Code Plus](https://github.com/xyhp915/logseq-fenced-code-plus)
 - [Chess Viewer for VSCode](https://github.com/eronnen/vscode-markdown-chess)
 
-### Icon
+## Icon
 
 by [Izaz Mahmud Sakib / Noun Project](https://thenounproject.com/icon/chess-knight-4208923/)
 
-### Licence
+## Licence
 
-MIT
+[MIT](https://raw.githubusercontent.com/r8/logseq-chess/main/LICENSE)
