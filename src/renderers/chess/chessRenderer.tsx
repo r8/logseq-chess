@@ -43,7 +43,7 @@ class ChessRenderer extends Renderer {
                 markSquares={chessConfig.squares}
                 highlightSquares={chessConfig.lastMove}
               />
-              <Toolbar />
+              {chessConfig.showToolbar && <Toolbar />}
             </SizeWatcher>
           </HydrateAtoms>
         </Provider>

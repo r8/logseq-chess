@@ -11,6 +11,7 @@ class ChessConfig {
   public lastMove?: Square[];
   public size?: string;
   public orientation?: BoardOrientation;
+  public showToolbar: boolean = false;
 
   constructor(content: string) {
     this.parse(content);
@@ -50,6 +51,9 @@ class ChessConfig {
       case "orientation":
         this.orientation = this.parseOrientation(value);
         break;
+      case "showtoolbar":
+        this.showToolbar = this.parseBoolean(value);
+        break;
     }
   };
 
@@ -78,6 +82,10 @@ class ChessConfig {
 
   private parseOrientation = (line: string): BoardOrientation => {
     return line == "black" ? "black" : "white";
+  };
+
+  private parseBoolean = (line: string): boolean => {
+    return line == "true";
   };
 }
 
