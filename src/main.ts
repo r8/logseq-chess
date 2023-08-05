@@ -2,7 +2,7 @@ import "@logseq/libs";
 import { LSPluginBaseInfo } from "@logseq/libs/dist/LSPlugin";
 import ChessRenderer from "./renderers/chess/chessRenderer";
 import Renderer from "./renderers/renderer";
-import { settingsSchema, ISettings } from "./settingsSchema";
+import { ISettings, settingsSchema } from "./settingsSchema";
 
 function main(baseInfo: LSPluginBaseInfo) {
   const { settings } = baseInfo;

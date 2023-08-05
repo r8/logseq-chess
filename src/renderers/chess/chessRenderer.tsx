@@ -5,7 +5,8 @@ import Renderer from "../renderer";
 import { ISettings } from "../../settingsSchema";
 import { ARROW_COLOR } from "../../constants/colors";
 import { Provider } from "jotai";
-import SizeWatcher from "../../components/layout/sizeWatcher";
+import SizeWatcher from "../../components/observers/sizeWatcher";
+import ThemeWatcher from "../../components/observers/themeWatcher";
 
 class ChessRenderer extends Renderer {
   supports = "chess";
@@ -28,6 +29,7 @@ class ChessRenderer extends Renderer {
       <div style={{ width: size }}>
         <Provider>
           <SizeWatcher>
+            <ThemeWatcher />
             <Chessboard
               position={chessConfig.fen}
               customArrows={chessConfig.arrows}
