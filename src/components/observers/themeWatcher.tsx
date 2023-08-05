@@ -9,12 +9,12 @@ const getButtonBackgroundColor = () => {
   return style.color;
 };
 
-const ThemeWatcher = (props) => {
+const ThemeWatcher = () => {
   const setTheme = useSetAtom(themeAtom);
 
   useEffect(() => {
     setTheme({
-      buttonBackground: getButtonBackgroundColor(),
+      buttonBackgroundColor: getButtonBackgroundColor(),
     });
   }, []);
 

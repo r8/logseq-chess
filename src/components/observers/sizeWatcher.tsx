@@ -16,7 +16,7 @@ const SizeWatcher = (props) => {
     }
 
     const observer = new ResizeObserver((event) => {
-      const size = event[0].contentBoxSize[0].blockSize;
+      const size = event[0].contentBoxSize[0].inlineSize;
 
       setContainerSize(size);
     });

@@ -29,5 +29,5 @@ export type CustomSquareRendererProps = {
 };
 
 export type Theme = {
-  buttonBackground: string;
+  buttonBackgroundColor: string;
 };
