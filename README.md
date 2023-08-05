@@ -12,7 +12,7 @@ A Logseq plugin for rendering chessboards
 
 #### Chess Positions
 
-Create chess fenced code block in your document and supply positions with `fen` property:
+Create a chess fenced code block in your document and supply the positions with `fen` property:
 
 ````markdown
 ```chess
@@ -20,7 +20,7 @@ fen: rnbqkbnr/pppp1ppp/8/4p2Q/4P3/8/PPPP1PPP/RNB1KBNR b KQkq - 1 2
 ```
 ````
 
-You can also draw the arrows on the board, mark some squares and highlight the last move:
+You can also draw some arrows on the board, mark some squares and highlight the last move:
 
 ````markdown
 ```chess
@@ -30,6 +30,20 @@ squares: g5 f7
 lastMove: f1 b5
 ```
 ````
+
+##### Properties
+
+You can set various properties inside the code block, each one on a separate line in the format `name: value`.
+
+| **Property**    | **Description**                                 | **Possible values**  | **Default**                                |
+|-----------------|-------------------------------------------------|----------------------|--------------------------------------------|
+| **fen**         | Chess position                                  | Any valid FEN string | Initial chess position                     |
+| **arrows**      | Series of arrows to draw                        | e2->e4 d2->d4        | Empty                                      |
+| **squares**     | Series of squares to mark                       | e5 d5                | Empty                                      |
+| **lastMove**    | Highlight last move                             | e2 e4                | Undefined                                  |
+| **size**        | Board width/height size in pixels or percents   | `400`, `50%`         | 280 pixels, overridable in plugin settings |
+| **orientation** | Which side should be at the bottom of the board | `white` / `black`    | `white`                                    |
+| **showToolbar** | Enables toolbar with orientation change control | `true` / `false`     | `false`                                    |
 
 ### Support
 
