@@ -9,6 +9,7 @@ import SizeWatcher from "../../components/observers/sizeWatcher";
 import ThemeWatcher from "../../components/observers/themeWatcher";
 import HydrateAtoms from "../../store/hydrateAtoms";
 import { boardOrientationAtom } from "../../store/boardOrientationAtom";
+import Toolbar from "../../components/toolbar/toolbar";
 
 class ChessRenderer extends Renderer {
   supports = "chess";
@@ -42,6 +43,7 @@ class ChessRenderer extends Renderer {
                 markSquares={chessConfig.squares}
                 highlightSquares={chessConfig.lastMove}
               />
+              <Toolbar />
             </SizeWatcher>
           </HydrateAtoms>
         </Provider>

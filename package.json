@@ -17,6 +17,7 @@
     "title": "Logseq Chess"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
     "@logseq/libs": "^0.0.15",
     "jotai": "^2.2.2",
     "react": "17.0.2",
