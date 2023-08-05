@@ -27,3 +27,7 @@ export type CustomSquareRendererProps = {
    */
   highlightSquares?: Square[];
 };
+
+export type Theme = {
+  buttonBackground: string;
+};
