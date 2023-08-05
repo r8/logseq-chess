@@ -7,6 +7,8 @@ import { ARROW_COLOR } from "../../constants/colors";
 import { Provider } from "jotai";
 import SizeWatcher from "../../components/observers/sizeWatcher";
 import ThemeWatcher from "../../components/observers/themeWatcher";
+import HydrateAtoms from "../../store/hydrateAtoms";
+import { boardOrientationAtom } from "../../store/boardOrientationAtom";
 
 class ChessRenderer extends Renderer {
   supports = "chess";
@@ -28,17 +30,20 @@ class ChessRenderer extends Renderer {
     return (
       <div style={{ width: size }}>
         <Provider>
-          <SizeWatcher>
+          <HydrateAtoms
+            initialValues={[[boardOrientationAtom, chessConfig.orientation]]}
+          >
             <ThemeWatcher />
-            <Chessboard
-              position={chessConfig.fen}
-              customArrows={chessConfig.arrows}
-              customArrowColor={ARROW_COLOR}
-              markSquares={chessConfig.squares}
-              highlightSquares={chessConfig.lastMove}
-              boardOrientation={chessConfig.orientation}
-            />
-          </SizeWatcher>
+            <SizeWatcher>
+              <Chessboard
+                position={chessConfig.fen}
+                customArrows={chessConfig.arrows}
+                customArrowColor={ARROW_COLOR}
+                markSquares={chessConfig.squares}
+                highlightSquares={chessConfig.lastMove}
+              />
+            </SizeWatcher>
+          </HydrateAtoms>
         </Provider>
       </div>
     );
