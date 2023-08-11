@@ -3,15 +3,20 @@ import {
   Square,
 } from "react-chessboard/dist/chessboard/types";
 import { ARROW_SEPARATOR } from "../../constants/config";
+import { Position } from "../../types";
+import { Chess } from "chess.js";
 
 class ChessConfig {
-  public fen?: string;
-  public arrows?: Square[][];
-  public squares?: Square[];
-  public lastMove?: Square[];
+  private fen?: string;
+  private arrows?: Square[][];
+  private squares?: Square[];
+  private lastMove?: Square[];
+  private moves: string[] = [];
+
   public size?: string;
   public orientation?: BoardOrientation;
   public showToolbar: boolean = false;
+  public positions: Position[] = [];
 
   constructor(content: string) {
     this.parse(content);
@@ -21,6 +26,12 @@ class ChessConfig {
     const lines = content.split(/(\r\n|\n|\r)/);
 
     lines.forEach(this.parseLine);
+
+    this.fillPositions();
+
+    if (this.positions.length > 1) {
+      this.showToolbar = true;
+    }
   };
 
   private parseLine = (line: string) => {
@@ -53,6 +64,9 @@ class ChessConfig {
         break;
       case "showtoolbar":
         this.showToolbar = this.parseBoolean(value);
+        break;
+      case "moves":
+        this.moves = this.parseMoves(value);
         break;
     }
   };
@@ -87,6 +101,32 @@ class ChessConfig {
   private parseBoolean = (line: string): boolean => {
     return line == "true";
   };
+
+  private parseMoves = (line: string): string[] => {
+    return line.split(" ").map((item) => item.trim());
+  };
+
+  private fillPositions() {
+    this.positions = [
+      {
+        fen: this.fen,
+        arrows: this.arrows,
+        squares: this.squares,
+        lastMove: this.lastMove,
+      },
+    ];
+
+    const chess = new Chess(this.fen);
+
+    this.moves.forEach((move) => chess.move(move));
+
+    chess.history({ verbose: true }).forEach((step) => {
+      this.positions.push({
+        fen: step.after,
+        lastMove: [step.from, step.to],
+      });
+    });
+  }
 }
 
 export default ChessConfig;

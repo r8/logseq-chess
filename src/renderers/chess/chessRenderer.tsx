@@ -3,13 +3,13 @@ import Chessboard from "../../components/chessboard/chessboard";
 import ChessConfig from "../../parsers/chess/chessConfig";
 import Renderer from "../renderer";
 import { ISettings } from "../../settingsSchema";
-import { ARROW_COLOR } from "../../constants/colors";
 import { Provider } from "jotai";
 import SizeWatcher from "../../components/observers/sizeWatcher";
 import ThemeWatcher from "../../components/observers/themeWatcher";
 import HydrateAtoms from "../../store/hydrateAtoms";
 import { boardOrientationAtom } from "../../store/boardOrientationAtom";
 import Toolbar from "../../components/toolbar/toolbar";
+import { positionsAtom } from "../../store/positions/positionsAtom";
 
 class ChessRenderer extends Renderer {
   supports = "chess";
@@ -32,17 +32,14 @@ class ChessRenderer extends Renderer {
       <div style={{ width: size }}>
         <Provider>
           <HydrateAtoms
-            initialValues={[[boardOrientationAtom, chessConfig.orientation]]}
+            initialValues={[
+              [boardOrientationAtom, chessConfig.orientation],
+              [positionsAtom, chessConfig.positions],
+            ]}
           >
             <ThemeWatcher />
             <SizeWatcher>
-              <Chessboard
-                position={chessConfig.fen}
-                customArrows={chessConfig.arrows}
-                customArrowColor={ARROW_COLOR}
-                markSquares={chessConfig.squares}
-                highlightSquares={chessConfig.lastMove}
-              />
+              <Chessboard />
               {chessConfig.showToolbar && <Toolbar />}
             </SizeWatcher>
           </HydrateAtoms>
