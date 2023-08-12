@@ -17,11 +17,12 @@
     "title": "Logseq Chess"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.18",
     "@logseq/libs": "^0.0.15",
+    "chess.js": "^1.0.0-beta.6",
     "jotai": "^2.2.2",
     "react": "17.0.2",
-    "react-chessboard": "^3.1.0"
+    "react-chessboard": "^4.0.1",
+    "react-icons": "^4.10.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",

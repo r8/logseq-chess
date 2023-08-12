@@ -5,10 +5,12 @@ import { themeAtom } from "../../store/themeAtom";
 
 export type ToolbarButtonProps = {
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  last?: boolean;
+  disabled?: boolean;
 };
 
 const ToolbarButton = (props: React.PropsWithChildren<ToolbarButtonProps>) => {
-  const { children, onClick } = props;
+  const { children, onClick, last, disabled } = props;
 
   const containerSize = useAtomValue(containerSizeAtom);
   const theme = useAtomValue(themeAtom);
@@ -18,22 +20,28 @@ const ToolbarButton = (props: React.PropsWithChildren<ToolbarButtonProps>) => {
   }
 
   const buttonSize = containerSize / 10;
+  const iconSize = buttonSize * 0.55;
 
   const buttonStyle = {
     width: buttonSize,
     height: buttonSize,
-    padding: buttonSize / 10,
     backgroundColor: theme.buttonBackgroundColor,
     borderRadius: buttonSize / 5,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: !last && buttonSize / 10,
+    opacity: disabled && 0.5,
   };
 
   return (
-    <button style={buttonStyle} onClick={onClick}>
+    <button style={buttonStyle} onClick={!disabled && onClick}>
       {React.Children.map(children, (child: ReactElement) => {
         return React.cloneElement(child, {
           style: {
             color: "white",
           },
+          size: iconSize,
         });
       })}
     </button>
