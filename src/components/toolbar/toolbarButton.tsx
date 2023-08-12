@@ -36,7 +36,7 @@ const ToolbarButton = (props: React.PropsWithChildren<ToolbarButtonProps>) => {
     width: buttonSize,
     height: buttonSize,
     backgroundColor: theme.buttonBackgroundColor,
-    filter: isHover ? "brightness(80%)" : null,
+    filter: !disabled && isHover ? "brightness(80%)" : null,
     borderRadius: buttonSize / 5,
     display: "flex",
     alignItems: "center",
@@ -49,8 +49,8 @@ const ToolbarButton = (props: React.PropsWithChildren<ToolbarButtonProps>) => {
     <button
       style={buttonStyle}
       onClick={!disabled && onClick}
-      onMouseEnter={!disabled && handleMouseEnter}
-      onMouseLeave={!disabled && handleMouseLeave}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {React.Children.map(children, (child: ReactElement) => {
         return React.cloneElement(child, {
