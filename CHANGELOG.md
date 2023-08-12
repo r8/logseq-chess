@@ -1,3 +1,18 @@
+# [1.4.0](https://github.com/r8/logseq-chess/compare/v1.3.0...v1.4.0) (2023-08-12)
+
+
+### Bug Fixes
+
+* Change toolbar button hover color ([d02275d](https://github.com/r8/logseq-chess/commit/d02275db8cc85fbaf1521234cac3f92d9e9f067c))
+* Fix hover for disabled buttons ([668d248](https://github.com/r8/logseq-chess/commit/668d2486f2bdfbec40f9d6e8e1580935745a32d0))
+* Fix toolbar buttons color ([f731890](https://github.com/r8/logseq-chess/commit/f731890d18299f592aa1def252f7345bca0c707d))
+* Fix toolbar buttons size ([e19a1b6](https://github.com/r8/logseq-chess/commit/e19a1b6341ae2a490ba59207e0e9c2acd96603c1))
+
+
+### Features
+
+* Support moves in the chess block ([5adb458](https://github.com/r8/logseq-chess/commit/5adb458129d46a0eceaeed74ecef62e461518f27))
+
 # [1.3.0](https://github.com/r8/logseq-chess/compare/v1.2.0...v1.3.0) (2023-08-05)
 
 
