@@ -28,25 +28,25 @@ const Toolbar = () => {
     }
   };
 
-  const positionForward = () => {
+  const stepForward = () => {
     if (currentPositionIndex < positionsCount - 1) {
       setCurrentPositionIndex(currentPositionIndex + 1);
     }
   };
 
-  const positionBack = () => {
+  const stepBack = () => {
     if (currentPositionIndex > 0) {
       setCurrentPositionIndex(currentPositionIndex - 1);
     }
   };
 
-  const positionFirst = () => {
+  const jumpToTheStart = () => {
     if (currentPositionIndex > 0) {
       setCurrentPositionIndex(0);
     }
   };
 
-  const positionLast = () => {
+  const jumpToTheEnd = () => {
     if (currentPositionIndex < positionsCount - 1) {
       setCurrentPositionIndex(positionsCount - 1);
     }
@@ -83,25 +83,25 @@ const Toolbar = () => {
             }}
           >
             <ToolbarButton
-              onClick={positionFirst}
+              onClick={jumpToTheStart}
               disabled={currentPositionIndex == 0}
             >
               <FaFastBackward />
             </ToolbarButton>
             <ToolbarButton
-              onClick={positionBack}
+              onClick={stepBack}
               disabled={currentPositionIndex == 0}
             >
               <FaStepBackward />
             </ToolbarButton>
             <ToolbarButton
-              onClick={positionForward}
+              onClick={stepForward}
               disabled={currentPositionIndex == positionsCount - 1}
             >
               <FaStepForward />
             </ToolbarButton>
             <ToolbarButton
-              onClick={positionLast}
+              onClick={jumpToTheEnd}
               disabled={currentPositionIndex == positionsCount - 1}
               last
             >
