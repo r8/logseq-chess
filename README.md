@@ -45,6 +45,33 @@ You can set various properties inside the code block, each one on a separate lin
 | **orientation** | Which side should be at the bottom of the board | `white` / `black`    | `white`                                    |
 | **showToolbar** | Enables toolbar with orientation change control | `true` / `false`     | `false`                                    |
 
+### Chess Moves
+
+If you supply start position and `moves` property to the chess code block, it will become a move browser instead of static chessboard render.
+
+In this case arrows and squares will be applied only to the starting position. And toolbar will be always visible, ignoring `showToolbar` value.
+
+````markdown
+``` chess
+fen: r1bqkbnr/1ppp1ppp/p1n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4
+moves: Ba4 Nf6 O-O b5 Bb3 Be7 Re1 d6
+arrows: f3->e5 b5->c6
+lastMove: f1 b5
+```
+````
+
+#### Properties
+
+| **Property**    | **Description**                                   | **Possible values**  | **Default**                                |
+|-----------------|---------------------------------------------------|----------------------|--------------------------------------------|
+| **fen**         | Initial position for the chain of moves           | Any valid FEN string | Initial chess position                     |
+| **moves**       | The chain of valid moves                          | Ba4 Nf6 O-O          | Empty                                      |
+| **arrows**      | Series of arrows to draw on the initial position  | e2->e4 d2->d4        | Empty                                      |
+| **squares**     | Series of squares to mark on the initial position | e5 d5                | Empty                                      |
+| **lastMove**    | Highlight last move on the initial position       | e2 e4                | Undefined                                  |
+| **size**        | Board width/height size in pixels or percents     | `400`, `50%`         | 280 pixels, overridable in plugin settings |
+| **orientation** | Which side should be at the bottom of the board   | `white` / `black`    | `white`                                    |
+
 ## Support
 
 <a href="https://www.buymeacoffee.com/reight"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=reight&button_colour=40DCA5&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00" /></a>
