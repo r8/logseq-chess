@@ -3,10 +3,10 @@ import { useSetAtom } from "jotai";
 import { themeAtom } from "../../store/themeAtom";
 
 const getButtonBackgroundColor = () => {
-  let elem = parent.document.querySelector("h1.title");
-  let style = getComputedStyle(elem);
+  let elem = parent.document.querySelector("button.ui__button");
+  let style = parent.window.getComputedStyle(elem);
 
-  return style.color;
+  return style.backgroundColor;
 };
 
 const ThemeWatcher = () => {
