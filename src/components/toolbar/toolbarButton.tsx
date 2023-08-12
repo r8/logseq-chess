@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactElement } from "react";
+import React, { MouseEventHandler, ReactElement, useState } from "react";
 import { useAtomValue } from "jotai";
 import { containerSizeAtom } from "../../store/containerSizeAtom";
 import { themeAtom } from "../../store/themeAtom";
@@ -19,6 +19,16 @@ const ToolbarButton = (props: React.PropsWithChildren<ToolbarButtonProps>) => {
     return null;
   }
 
+  const [isHover, setIsHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
+
   const buttonSize = containerSize / 11;
   const iconSize = buttonSize * 0.55;
 
@@ -26,6 +36,7 @@ const ToolbarButton = (props: React.PropsWithChildren<ToolbarButtonProps>) => {
     width: buttonSize,
     height: buttonSize,
     backgroundColor: theme.buttonBackgroundColor,
+    filter: isHover ? "brightness(80%)" : null,
     borderRadius: buttonSize / 5,
     display: "flex",
     alignItems: "center",
@@ -35,7 +46,12 @@ const ToolbarButton = (props: React.PropsWithChildren<ToolbarButtonProps>) => {
   };
 
   return (
-    <button style={buttonStyle} onClick={!disabled && onClick}>
+    <button
+      style={buttonStyle}
+      onClick={!disabled && onClick}
+      onMouseEnter={!disabled && handleMouseEnter}
+      onMouseLeave={!disabled && handleMouseLeave}
+    >
       {React.Children.map(children, (child: ReactElement) => {
         return React.cloneElement(child, {
           style: {
