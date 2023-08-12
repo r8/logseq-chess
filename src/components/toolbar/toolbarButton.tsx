@@ -19,7 +19,7 @@ const ToolbarButton = (props: React.PropsWithChildren<ToolbarButtonProps>) => {
     return null;
   }
 
-  const buttonSize = containerSize / 10;
+  const buttonSize = containerSize / 11;
   const iconSize = buttonSize * 0.55;
 
   const buttonStyle = {
