@@ -59,7 +59,8 @@ const Toolbar = () => {
   return (
     <div
       style={{
-        paddingTop: containerSize / 40,
+        marginTop: containerSize / 40,
+        marginBottom: containerSize / 40,
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
