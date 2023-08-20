@@ -14,7 +14,7 @@ class ChessConfig {
   private moves: string[] = [];
 
   public size?: string;
-  public orientation?: BoardOrientation;
+  public orientation: BoardOrientation = "white";
   public showToolbar: boolean = false;
   public positions: Position[] = [];
 
