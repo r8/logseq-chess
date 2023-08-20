@@ -18,7 +18,7 @@ const Chessboard = forwardRef<ClearPremoves>((props, ref) => {
       <ChessboardParent
         ref={ref}
         customArrowColor={ARROW_COLOR}
-        animationDuration={300}
+        animationDuration={200}
         position={currentPosition.fen}
         customArrows={currentPosition.arrows}
         boardOrientation={boardOrientation}
