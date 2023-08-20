@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/r8/logseq-chess/compare/v1.4.1...v1.4.2) (2023-08-20)
+
+
+### Bug Fixes
+
+* Render square marks in separate layer to fix pieces animation ([d309ca7](https://github.com/r8/logseq-chess/commit/d309ca7e4748ddcef3cd04460d3c69d1c5051938))
+
 ## [1.4.1](https://github.com/r8/logseq-chess/compare/v1.4.0...v1.4.1) (2023-08-20)
 
 
