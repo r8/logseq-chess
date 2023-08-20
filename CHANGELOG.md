@@ -1,3 +1,11 @@
+## [1.4.1](https://github.com/r8/logseq-chess/compare/v1.4.0...v1.4.1) (2023-08-20)
+
+
+### Bug Fixes
+
+* Fix toolbar vertical margin ([cb7e6f2](https://github.com/r8/logseq-chess/commit/cb7e6f2c8c1653b81f5226892ea82d915f85d8fd))
+* Initialize default board orientation value ([281bf59](https://github.com/r8/logseq-chess/commit/281bf592a22b84956123b852f3bd56f7373ea692))
+
 # [1.4.0](https://github.com/r8/logseq-chess/compare/v1.3.0...v1.4.0) (2023-08-12)
 
 
