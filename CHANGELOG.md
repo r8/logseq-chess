@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/r8/logseq-chess/compare/v1.4.2...v1.5.0) (2023-09-02)
+
+
+### Bug Fixes
+
+* Decrease pieces animation length ([89519ae](https://github.com/r8/logseq-chess/commit/89519ae598c08008185379267d81e0227d827742))
+
+
+### Features
+
+* Add ability to set active move from the chain of moves ([146a354](https://github.com/r8/logseq-chess/commit/146a3541323c12c5514a8555fa8768cea106857e))
+
 ## [1.4.2](https://github.com/r8/logseq-chess/compare/v1.4.1...v1.4.2) (2023-08-20)
 
 
