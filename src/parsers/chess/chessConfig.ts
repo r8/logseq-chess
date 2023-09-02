@@ -14,9 +14,11 @@ class ChessConfig {
   private moves: string[] = [];
 
   public size?: string;
+  public startFrom?: string;
   public orientation: BoardOrientation = "white";
   public showToolbar: boolean = false;
   public positions: Position[] = [];
+  public initialPosition: number;
 
   constructor(content: string) {
     this.parse(content);
@@ -28,6 +30,7 @@ class ChessConfig {
     lines.forEach(this.parseLine);
 
     this.fillPositions();
+    this.parseInitialPosition();
 
     if (this.positions.length > 1) {
       this.showToolbar = true;
@@ -67,6 +70,9 @@ class ChessConfig {
         break;
       case "moves":
         this.moves = this.parseMoves(value);
+        break;
+      case "startfrom":
+        this.startFrom = value;
         break;
     }
   };
@@ -126,6 +132,23 @@ class ChessConfig {
         lastMove: [step.from, step.to],
       });
     });
+  }
+
+  private parseInitialPosition() {
+    const asString = this.startFrom?.toLowerCase() || "";
+    const asNumber = parseInt(asString);
+
+    if (asString === "first") {
+      this.initialPosition = 0;
+    } else if (asString === "last") {
+      this.initialPosition = this.positions.length - 1;
+    } else if (!asNumber || asNumber <= 1) {
+      this.initialPosition = 0;
+    } else if (asNumber >= this.positions.length) {
+      this.initialPosition = this.positions.length - 1;
+    } else {
+      this.initialPosition = asNumber - 1;
+    }
   }
 }
 

@@ -10,6 +10,7 @@ import HydrateAtoms from "../../store/hydrateAtoms";
 import { boardOrientationAtom } from "../../store/boardOrientationAtom";
 import Toolbar from "../../components/toolbar/toolbar";
 import { positionsAtom } from "../../store/positions/positionsAtom";
+import { currentPositionIndexAtom } from "../../store/positions/currentPositionIndexAtom";
 
 class ChessRenderer extends Renderer {
   supports = "chess";
@@ -35,6 +36,7 @@ class ChessRenderer extends Renderer {
             initialValues={[
               [boardOrientationAtom, chessConfig.orientation],
               [positionsAtom, chessConfig.positions],
+              [currentPositionIndexAtom, chessConfig.initialPosition],
             ]}
           >
             <ThemeWatcher />

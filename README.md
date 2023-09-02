@@ -57,20 +57,22 @@ fen: r1bqkbnr/1ppp1ppp/p1n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4
 moves: Ba4 Nf6 O-O b5 Bb3 Be7 Re1 d6
 arrows: f3->e5 b5->c6
 lastMove: f1 b5
+startFrom: last
 ```
 ````
 
 #### Properties
 
-| **Property**    | **Description**                                   | **Possible values**  | **Default**                                |
-|-----------------|---------------------------------------------------|----------------------|--------------------------------------------|
-| **fen**         | Initial position for the chain of moves           | Any valid FEN string | Initial chess position                     |
-| **moves**       | The chain of valid moves                          | Ba4 Nf6 O-O          | Empty                                      |
-| **arrows**      | Series of arrows to draw on the initial position  | e2->e4 d2->d4        | Empty                                      |
-| **squares**     | Series of squares to mark on the initial position | e5 d5                | Empty                                      |
-| **lastMove**    | Highlight last move on the initial position       | e2 e4                | Undefined                                  |
-| **size**        | Board width/height size in pixels or percents     | `400`, `50%`         | 280 pixels, overridable in plugin settings |
-| **orientation** | Which side should be at the bottom of the board   | `white` / `black`    | `white`                                    |
+| **Property**    | **Description**                                                    | **Possible values**       | **Default**                                |
+|-----------------|--------------------------------------------------------------------|---------------------------|--------------------------------------------|
+| **fen**         | Initial position for the chain of moves                            | Any valid FEN string      | Initial chess position                     |
+| **moves**       | The chain of valid moves                                           | Ba4 Nf6 O-O               | Empty                                      |
+| **startFrom**   | Number of the move that should be set as current on initial render | `1`, `3`, `first`, `last` | Empty                                      |
+| **arrows**      | Series of arrows to draw on the initial position                   | e2->e4 d2->d4             | Empty                                      |
+| **squares**     | Series of squares to mark on the initial position                  | e5 d5                     | Empty                                      |
+| **lastMove**    | Highlight last move on the initial position                        | e2 e4                     | Undefined                                  |
+| **size**        | Board width/height size in pixels or percents                      | `400`, `50%`              | 280 pixels, overridable in plugin settings |
+| **orientation** | Which side should be at the bottom of the board                    | `white` / `black`         | `white`                                    |
 
 ## Support
 
