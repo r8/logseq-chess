@@ -3,8 +3,8 @@ import { useSetAtom } from "jotai";
 import { themeAtom } from "../../store/themeAtom";
 
 const getButtonBackgroundColor = () => {
-  let elem = parent.document.querySelector("button.ui__button");
-  let style = parent.window.getComputedStyle(elem);
+  const elem = parent.document.querySelector("button.ui__button");
+  const style = parent.window.getComputedStyle(elem);
 
   return style.backgroundColor;
 };

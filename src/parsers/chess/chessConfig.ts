@@ -91,7 +91,7 @@ class ChessConfig {
   };
 
   private parseSquares = (line: string, limit: number = null): Square[] => {
-    let items = line.split(" ").map((item) => item.trim() as Square);
+    const items = line.split(" ").map((item) => item.trim() as Square);
 
     if (limit) {
       return items.slice(0 - limit);
