@@ -58,31 +58,19 @@ const Toolbar = () => {
 
   return (
     <div
+      className="flex flex-row justify-between"
       style={{
         marginTop: containerSize / 40,
         marginBottom: containerSize / 40,
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
       }}
     >
       <ToolbarButton onClick={switchBoardOrientation}>
         <FaRotate />
       </ToolbarButton>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
+      <div className="flex flex-row">
         {positionsCount > 1 && (
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
+          <div className="flex flex-row">
             <ToolbarButton
               onClick={jumpToTheStart}
               disabled={currentPositionIndex == 0}

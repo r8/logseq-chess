@@ -7,16 +7,7 @@ const MarkLayer = (props: MarkLayerProps) => {
   const { markSquares, highlightSquares } = props;
 
   return (
-    <div
-      style={{
-        position: "absolute",
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
-        zIndex: 2,
-      }}
-    >
+    <div className="absolute left-0 top-0 right-0 bottom-0 z-2">
       {markSquares &&
         markSquares.map((square) => <SquareMark square={square} />)}
       {highlightSquares &&

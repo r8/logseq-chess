@@ -5,7 +5,6 @@ import Renderer from "../renderer";
 import { ISettings } from "../../settingsSchema";
 import { Provider } from "jotai";
 import SizeWatcher from "../../components/observers/sizeWatcher";
-import ThemeWatcher from "../../components/observers/themeWatcher";
 import HydrateAtoms from "../../store/hydrateAtoms";
 import { boardOrientationAtom } from "../../store/boardOrientationAtom";
 import Toolbar from "../../components/toolbar/toolbar";
@@ -39,7 +38,6 @@ class ChessRenderer extends Renderer {
               [currentPositionIndexAtom, chessConfig.initialPosition],
             ]}
           >
-            <ThemeWatcher />
             <SizeWatcher>
               <Chessboard />
               {chessConfig.showToolbar && <Toolbar />}

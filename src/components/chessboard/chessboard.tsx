@@ -14,7 +14,7 @@ const Chessboard = forwardRef<ClearPremoves>((props, ref) => {
   const currentPosition = useAtomValue(currentPositionAtom);
 
   return (
-    <div style={{ position: "relative" }}>
+    <div className="relative">
       <ChessboardParent
         ref={ref}
         customArrowColor={ARROW_COLOR}

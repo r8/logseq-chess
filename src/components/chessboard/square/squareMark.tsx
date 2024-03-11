@@ -26,8 +26,8 @@ const SquareMark = (props: SquareMarkProps) => {
 
   return (
     <div
+      className="absolute"
       style={{
-        position: "absolute",
         width: size,
         height: size,
         left: squareCoordinates.x - size / 2,
