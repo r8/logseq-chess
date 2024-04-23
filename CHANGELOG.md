@@ -1,3 +1,11 @@
+## [1.5.1](https://github.com/r8/logseq-chess/compare/v1.5.0...v1.5.1) (2024-04-23)
+
+
+### Bug Fixes
+
+* Fix variable declarations ([9a85afd](https://github.com/r8/logseq-chess/commit/9a85afd8f6e2e6fa9d4e3c45d18adec780e9b13b))
+* Use Tailwind for UI styling ([8d23f5e](https://github.com/r8/logseq-chess/commit/8d23f5e535e87592c5e68128c05505590a1c00b0))
+
 # [1.5.0](https://github.com/r8/logseq-chess/compare/v1.4.2...v1.5.0) (2023-09-02)
 
 
