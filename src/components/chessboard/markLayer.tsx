@@ -9,9 +9,13 @@ const MarkLayer = (props: MarkLayerProps) => {
   return (
     <div className="absolute left-0 top-0 right-0 bottom-0 z-2">
       {markSquares &&
-        markSquares.map((square) => <SquareMark square={square} />)}
+        markSquares.map((square) => (
+          <SquareMark key={square} square={square} />
+        ))}
       {highlightSquares &&
-        highlightSquares.map((square) => <SquareHighlight square={square} />)}
+        highlightSquares.map((square) => (
+          <SquareHighlight key={square} square={square} />
+        ))}
     </div>
   );
 };
