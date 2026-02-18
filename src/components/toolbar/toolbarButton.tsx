@@ -13,10 +13,6 @@ const ToolbarButton = (props: React.PropsWithChildren<ToolbarButtonProps>) => {
 
   const containerSize = useAtomValue(containerSizeAtom);
 
-  if (!containerSize) {
-    return null;
-  }
-
   const [isHover, setIsHover] = useState(false);
 
   const handleMouseEnter = () => {
@@ -38,6 +34,10 @@ const ToolbarButton = (props: React.PropsWithChildren<ToolbarButtonProps>) => {
     marginRight: !last && buttonSize / 10,
     opacity: disabled && 0.5,
   };
+
+  if (!containerSize) {
+    return null;
+  }
 
   return (
     <button
